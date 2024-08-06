@@ -8,6 +8,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.retrofit.model.DemoData
 import com.example.retrofit.network.Demo
 import com.example.retrofit.network.Network
 import com.example.retrofit.ui.theme.RetrofitTheme
@@ -20,7 +21,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         //B4: tạo coroutine để lấy data từ server trả về
         CoroutineScope(Dispatchers.IO).launch {
-          val request = Network.createRetrofit("https://jsonplaceholder.typicode.com/").create(Demo::class.java).getPost(1)
+          val request = Network.createRetrofit("https://jsonplaceholder.typicode.com/").create(Demo::class.java).getPost(10)
             if (request.isSuccessful){
                 request.body()?.userId // lấy data từ server ô
             }
