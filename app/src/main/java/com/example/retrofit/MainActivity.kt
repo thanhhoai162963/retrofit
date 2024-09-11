@@ -19,14 +19,7 @@ import kotlinx.coroutines.launch
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //B4: tạo coroutine để lấy data từ server trả về
-        CoroutineScope(Dispatchers.IO).launch {
-          val request = Network.createRetrofit("https://jsonplaceholder.typicode.com/").create(Demo::class.java).getPost(10)
-            if (request.isSuccessful){
-                request.body()?.userId // lấy data từ server ô
-            }
 
-        }
         enableEdgeToEdge()
         setContent {
 

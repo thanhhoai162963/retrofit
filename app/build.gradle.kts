@@ -73,6 +73,8 @@ dependencies {
     implementation (libs.logging.interceptor)
 
     implementation(libs.gson)
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.5")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.5")
 
 
 }
