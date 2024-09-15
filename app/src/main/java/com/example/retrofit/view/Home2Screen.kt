@@ -12,12 +12,12 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.retrofit.viewmodel.DemoViewModel
 
 @Composable
-fun HomeScreen(demoViewModel: DemoViewModel = viewModel()){
+fun Home2Screen(demoViewModel: DemoViewModel = viewModel()){
 
     val demoState = demoViewModel.abc.collectAsState().value
     LaunchedEffect(true) {
-        demoViewModel.coldFlow().collect{
-
+        FlowBus.events.collect{
+            it//student
         }
     }
 
