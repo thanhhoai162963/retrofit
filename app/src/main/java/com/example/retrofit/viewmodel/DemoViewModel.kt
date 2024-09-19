@@ -5,7 +5,6 @@ import com.example.retrofit.network.Demo
 import com.example.retrofit.network.Network
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -30,7 +29,7 @@ class DemoViewModel : ViewModel() {
     // 1 ko biet vong doi
     // 2 share flow cho cac thang khac
     // 3 tồn tại trên toàn app
-    fun callAPI() {
+    suspend fun callAPI() {
         CoroutineScope(Dispatchers.IO).launch {
             val request = Network.createRetrofit("https://jsonplaceholder.typicode.com/").create(
                 Demo::class.java

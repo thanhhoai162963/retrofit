@@ -30,7 +30,7 @@ object Network {
     fun httpLoggingInterceptor(): HttpLoggingInterceptor {
         val httpLoggingInterceptor =
             HttpLoggingInterceptor { message ->
-                Log.d("http:",message)
+                Log.d("http_demo:",message)
             }
         httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
         httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.HEADERS

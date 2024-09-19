@@ -23,7 +23,7 @@ fun Home2Screen(demoViewModel: DemoViewModel = viewModel()){
 
 
     Button(modifier = Modifier.fillMaxWidth(), onClick = {
-        demoViewModel.callAPI()
+        //demoViewModel.callAPI()
     }) {
         Text(text = demoState.toString())// 100
     }

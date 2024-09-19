@@ -12,6 +12,7 @@ import com.example.retrofit.model.DemoData
 import com.example.retrofit.network.Demo
 import com.example.retrofit.network.Network
 import com.example.retrofit.ui.theme.RetrofitTheme
+import com.example.retrofit.view.HomeScreen
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
 
         enableEdgeToEdge()
         setContent {
-
+            HomeScreen()
         }
     }
 }
